@@ -167,6 +167,28 @@
     <Compile Include="L008DisplayYourOwnCandidateWindow\Native.cs" />
     <Compile Include="L008DisplayYourOwnCandidateWindow\Native.imm32.cs" />
     <Compile Include="L008DisplayYourOwnCandidateWindow\Native.struct.cs" />
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\CandidateList.cs" />
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\CandidateWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\CandidateWindowForm.Designer.cs">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\L009Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\L009Form.Designer.cs">
+      <DependentUpon>L009Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\L009UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\L009UserControl.Designer.cs">
+      <DependentUpon>L009UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.cs" />
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.imm32.cs" />
+    <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.struct.cs" />
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="L008DisplayYourOwnCandidateWindow\L008Form.resx">
       <DependentUpon>L008Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L009ShowOwnCompositionOnlyHideImeOne\CandidateWindowForm.resx">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L009ShowOwnCompositionOnlyHideImeOne\L009Form.resx">
+      <DependentUpon>L009Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
