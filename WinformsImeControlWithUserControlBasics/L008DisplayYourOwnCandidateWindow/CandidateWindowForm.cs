@@ -16,6 +16,7 @@ namespace WinformsImeControlWithUserControlBasics.L008DisplayYourOwnCandidateWin
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ImeMode = ImeMode.Off;
             Visible = false;
+            
 
             FormClosing += (s, e) => {
                 if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.TaskManagerClosing) {
@@ -34,7 +35,7 @@ namespace WinformsImeControlWithUserControlBasics.L008DisplayYourOwnCandidateWin
         protected override CreateParams CreateParams {
             get {
                 CreateParams baseParams = base.CreateParams;
-                baseParams.ExStyle |= (int)(Native.WS_EX_NOACTIVATE | Native.WS_EX_TOOLWINDOW);
+                baseParams.ExStyle |= (int)(Native.WS_EX_NOACTIVATE | Native.WS_EX_TOOLWINDOW | Native.WS_EX_TOPMOST);
                 return baseParams;
             }
         }

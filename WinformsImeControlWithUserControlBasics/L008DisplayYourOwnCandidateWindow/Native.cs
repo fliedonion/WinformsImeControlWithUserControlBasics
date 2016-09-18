@@ -8,7 +8,8 @@ namespace WinformsImeControlWithUserControlBasics.L008DisplayYourOwnCandidateWin
         // Window Style
         public const int 
             WS_EX_NOACTIVATE = 0x08000000,
-            WS_EX_TOOLWINDOW = 0x00000080;
+            WS_EX_TOOLWINDOW = 0x00000080,
+            WS_EX_TOPMOST = 0x00000008;
 
         // WM
         public const int
