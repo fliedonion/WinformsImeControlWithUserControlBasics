@@ -266,14 +266,6 @@ namespace WinformsImeControlWithUserControlBasics.L008DisplayYourOwnCandidateWin
                         }
                         clist.CandidateStrings.Add(Encoding.Unicode.GetString(buf, offsetPos, l));
                     }
-                    //for (int i = 0; i < clist.DwCount; i++) {
-                    //    var offsetPos = BitConverter.ToInt32(buf, i * sizeOfDWORD + sizeOfDWORD * 6);
-                    //    var length = 0;
-                    //    while (buf[offsetPos + length] != '\0') {
-                    //        length++;
-                    //    }
-                    //    clist.CandidateStrings.Add(Encoding.Unicode.GetString(buf, offsetPos, length));
-                    //}
                     return clist;
                 }
                 return null;
