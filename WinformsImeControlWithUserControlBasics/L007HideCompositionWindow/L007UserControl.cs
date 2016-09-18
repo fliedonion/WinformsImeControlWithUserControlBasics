@@ -167,7 +167,7 @@ namespace WinformsImeControlWithUserControlBasics.L007HideCompositionWindow {
         }
 
 
-        public void SetCompositionWindowPos(bool hide) {
+        protected virtual void SetCompositionWindowPos(bool hide) {
             var hIMC = Native.ImmGetContext(this.Handle);
             try {
                 var cf = new Native.COMPOSITIONFORM();
