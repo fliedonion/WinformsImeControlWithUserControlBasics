@@ -13,6 +13,7 @@ namespace WinformsImeControlWithUserControlBasics {
     public partial class MenuForm : Form {
         public MenuForm() {
             InitializeComponent();
+
             AddToDictIfFormExists("L001", "Create UserControl That Support IME");
             AddToDictIfFormExists("L002", "Accept IME Result Text");
             AddToDictIfFormExists("L003", "DrawText");
@@ -30,22 +31,22 @@ namespace WinformsImeControlWithUserControlBasics {
         private void CreateButtons() {
             var top = 10;
             var height = 30;
-            var width = 200;
+            var width = 260;
             var left = 30;
 
-            this.SuspendLayout();
+            panel1.SuspendLayout();
 
             foreach (var key in keyDescriptionDict.Keys) {
                 if (keyDescriptionDict.ContainsKey(key)) {
                     var btn = new Button {
                         Name = key + "Button",
-                        Text = keyDescriptionDict[key],
+                        Text = key + " : " + keyDescriptionDict[key],
+                        TextAlign = ContentAlignment.MiddleLeft,
                         Top = top,
                         Left = left,
                         Width = width,
                         Height = height,
                         AutoSize = true,
-                        AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly,
                         Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top,
                         Visible = true,
                     };
@@ -54,11 +55,11 @@ namespace WinformsImeControlWithUserControlBasics {
                         CreateFormStartsWithLessonNumber(key).ShowDialog();
                     };
 
-                    this.Controls.Add(btn);
+                    panel1.Controls.Add(btn);
                     top += height + 10;
                 }
             }
-            this.ResumeLayout(true);
+            panel1.ResumeLayout(true);
         }
 
         private void MenuForm_Load(object sender, EventArgs e) {
