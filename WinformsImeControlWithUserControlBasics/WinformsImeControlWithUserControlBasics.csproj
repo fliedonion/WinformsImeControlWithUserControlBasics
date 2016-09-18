@@ -115,6 +115,36 @@
     <Compile Include="L005HideCandidateWindow\Native.cs" />
     <Compile Include="L005HideCandidateWindow\Native.imm32.cs" />
     <Compile Include="L005HideCandidateWindow\Native.struct.cs" />
+    <Compile Include="L006DrawCompositionText\L006Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L006DrawCompositionText\L006Form.Designer.cs">
+      <DependentUpon>L006Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L006DrawCompositionText\L006UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="L006DrawCompositionText\L006UserControl.Designer.cs">
+      <DependentUpon>L006UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L006DrawCompositionText\Native.cs" />
+    <Compile Include="L006DrawCompositionText\Native.imm32.cs" />
+    <Compile Include="L006DrawCompositionText\Native.struct.cs" />
+    <Compile Include="L007HideCompositionWindow\L007Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L007HideCompositionWindow\L007Form.Designer.cs">
+      <DependentUpon>L007Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L007HideCompositionWindow\L007UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="L007HideCompositionWindow\L007UserControl.Designer.cs">
+      <DependentUpon>L007UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L007HideCompositionWindow\Native.cs" />
+    <Compile Include="L007HideCompositionWindow\Native.imm32.cs" />
+    <Compile Include="L007HideCompositionWindow\Native.struct.cs" />
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="L005HideCandidateWindow\L005Form.resx">
       <DependentUpon>L005Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L006DrawCompositionText\L006Form.resx">
+      <DependentUpon>L006Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L007HideCompositionWindow\L007Form.resx">
+      <DependentUpon>L007Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
