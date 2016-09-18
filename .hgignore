@@ -1,0 +1,11 @@
+syntax: glob
+.git/
+.DS_Store
+vcs-ignore/
+.vs/
+*.suo
+*.csproj.user
+[bB]in/[Dd]ebug/
+[oO]bj/[Dd]ebug/
+[bB]in/[Rr]elease/
+[oO]bj/[Rr]elease/

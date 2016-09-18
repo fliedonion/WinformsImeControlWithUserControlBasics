@@ -1,0 +1,10 @@
+.hg/
+.DS_Store
+vcs-ignore/
+.vs/
+*.suo
+*.user
+[bB]in/
+[oO]bj/
+[Dd]ebug/
+[Rr]elease/
