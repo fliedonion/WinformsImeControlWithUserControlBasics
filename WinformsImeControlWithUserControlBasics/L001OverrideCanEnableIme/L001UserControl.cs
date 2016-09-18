@@ -20,12 +20,16 @@ namespace WinformsImeControlWithUserControlBasics.L001OverrideCanEnableIme {
             }
         }
 
-
         protected virtual void InitControl() {
-            this.Height = 40;
-            this.Width = 450;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
         }
+        
+        protected override Size DefaultSize {
+            get {
+                return new Size(450, 40);
+            }
+        }
+        
     }
 }

@@ -33,6 +33,14 @@ namespace WinformsImeControlWithUserControlBasics.L002AcceptText {
             #endregion
         }
 
+        protected override Size DefaultSize {
+            #region L001
+            get {
+                return new Size(450, 40);
+            }
+            #endregion
+        }
+
         public override string Text {
             get {
                 return base.Text;

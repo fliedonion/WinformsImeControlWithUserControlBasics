@@ -34,6 +34,14 @@ namespace WinformsImeControlWithUserControlBasics.L005HideCandidateWindow {
             #endregion
         }
 
+        protected override Size DefaultSize {
+            #region L001
+            get {
+                return new Size(450, 40);
+            }
+            #endregion
+        }
+
         public override string Text {
             #region L002
             get {
