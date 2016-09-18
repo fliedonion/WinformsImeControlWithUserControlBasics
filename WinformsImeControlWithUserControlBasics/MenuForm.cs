@@ -19,7 +19,8 @@ namespace WinformsImeControlWithUserControlBasics {
             AddToDictIfFormExists("L004", "DisplayCompositionWindowInsideControl");
             AddToDictIfFormExists("L005", "HideCandidateWindow");
             AddToDictIfFormExists("L006", "DrawCompositionText");
-            AddToDictIfFormExists("L007", "HideCompositionWindow");            
+            AddToDictIfFormExists("L007", "HideCompositionWindow");
+            AddToDictIfFormExists("L008", "DisplayYourOwnCandidateWindow");
 
             CreateButtons();
 

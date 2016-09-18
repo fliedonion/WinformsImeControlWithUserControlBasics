@@ -145,6 +145,28 @@
     <Compile Include="L007HideCompositionWindow\Native.cs" />
     <Compile Include="L007HideCompositionWindow\Native.imm32.cs" />
     <Compile Include="L007HideCompositionWindow\Native.struct.cs" />
+    <Compile Include="L008DisplayYourOwnCandidateWindow\CandidateList.cs" />
+    <Compile Include="L008DisplayYourOwnCandidateWindow\CandidateWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\CandidateWindowForm.Designer.cs">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\L008Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\L008Form.Designer.cs">
+      <DependentUpon>L008Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\L008UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\L008UserControl.Designer.cs">
+      <DependentUpon>L008UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L008DisplayYourOwnCandidateWindow\Native.cs" />
+    <Compile Include="L008DisplayYourOwnCandidateWindow\Native.imm32.cs" />
+    <Compile Include="L008DisplayYourOwnCandidateWindow\Native.struct.cs" />
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="L007HideCompositionWindow\L007Form.resx">
       <DependentUpon>L007Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L008DisplayYourOwnCandidateWindow\CandidateWindowForm.resx">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L008DisplayYourOwnCandidateWindow\L008Form.resx">
+      <DependentUpon>L008Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
