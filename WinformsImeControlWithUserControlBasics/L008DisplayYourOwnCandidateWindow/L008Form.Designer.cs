@@ -32,9 +32,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 18);
+            this.label1.Size = new System.Drawing.Size(258, 18);
             this.label1.TabIndex = 8;
-            this.label1.Text = "変換中テキストが表示される事の確認";
+            this.label1.Text = "独自変換ウィンドウが表示されること";
             // 
             // l008UserControl1
             // 
