@@ -189,6 +189,28 @@
     <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.cs" />
     <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.imm32.cs" />
     <Compile Include="L009ShowOwnCompositionOnlyHideImeOne\Native.struct.cs" />
+    <Compile Include="L010DrawWithCompositionAttr\CandidateList.cs" />
+    <Compile Include="L010DrawWithCompositionAttr\CandidateWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\CandidateWindowForm.Designer.cs">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\L010Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\L010Form.Designer.cs">
+      <DependentUpon>L010Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\L010UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\L010UserControl.Designer.cs">
+      <DependentUpon>L010UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="L010DrawWithCompositionAttr\Native.cs" />
+    <Compile Include="L010DrawWithCompositionAttr\Native.imm32.cs" />
+    <Compile Include="L010DrawWithCompositionAttr\Native.struct.cs" />
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +251,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="L009ShowOwnCompositionOnlyHideImeOne\L009Form.resx">
       <DependentUpon>L009Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L010DrawWithCompositionAttr\CandidateWindowForm.resx">
+      <DependentUpon>CandidateWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="L010DrawWithCompositionAttr\L010Form.resx">
+      <DependentUpon>L010Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
