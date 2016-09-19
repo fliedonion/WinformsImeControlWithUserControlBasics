@@ -67,6 +67,11 @@ namespace WinformsImeControlWithUserControlBasics.L009ShowOwnCompositionOnlyHide
                     SetCompositionWindowPos(hideCompositionWindow);
                     Focus();
                     #endregion
+                    #region L008
+                    if (hideCompositionWindow && !hideCandidateWindow) {
+                        SetCandidateWindowPos();
+                    }
+                    #endregion
                     break;
                 case Native.WM_CHAR:
                     #region L003
@@ -290,6 +295,38 @@ namespace WinformsImeControlWithUserControlBasics.L009ShowOwnCompositionOnlyHide
         protected virtual void HideCandidate() {
             #region L008
             candidateWindow.Hide();
+            #endregion
+        }
+
+        /// <summary>
+        /// for Fix Problem when hide composition but display default candidate.
+        /// </summary>
+        protected virtual void SetCandidateWindowPos() {
+            #region L008
+            SetCandidateWindowPos(Left, 0);
+            #endregion
+        }
+
+        protected virtual void SetCandidateWindowPos(int x, int y) {
+            #region L008
+            var hIMC = Native.ImmGetContext(Handle);
+            try {
+
+                var cf = new Native.CANDIDATEFORM();
+                cf.ptCurrentPos.x = x;
+                cf.ptCurrentPos.y = y;
+                cf.dwStyle = Native.CFS_CANDIDATEPOS;
+
+                if (hIMC != IntPtr.Zero) {
+                    Native.ImmSetCandidateWindow(hIMC, ref cf);
+                }
+                Native.ImmReleaseContext(Handle, hIMC);
+            }
+            finally {
+                if (hIMC != IntPtr.Zero) {
+                    Native.ImmReleaseContext(Handle, hIMC);
+                }
+            }
             #endregion
         }
 

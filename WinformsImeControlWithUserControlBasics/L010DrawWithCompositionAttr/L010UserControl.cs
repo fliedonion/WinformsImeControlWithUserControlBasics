@@ -67,6 +67,11 @@ namespace WinformsImeControlWithUserControlBasics.L010DrawWithCompositionAttr {
                     SetCompositionWindowPos(hideCompositionWindow);
                     Focus();
                     #endregion
+                    #region L008
+                    if (hideCompositionWindow && !hideCandidateWindow) {
+                        SetCandidateWindowPos();
+                    }
+                    #endregion
                     break;
                 case Native.WM_CHAR:
                     #region L003
@@ -191,7 +196,6 @@ namespace WinformsImeControlWithUserControlBasics.L010DrawWithCompositionAttr {
                 e.Graphics.FillRectangle(new Pen(Color.Aqua).Brush, 0, compTop, sizef.Width, sizef.Height);
                 #endregion
 
-                #region L010
                 e.Graphics.DrawString(composition, this.Font, new Pen(ForeColor).Brush, new PointF(0, compTop));
 
                 if (compositionAttr != null && compositionAttr.Length > 0) {
@@ -251,7 +255,6 @@ namespace WinformsImeControlWithUserControlBasics.L010DrawWithCompositionAttr {
                 else {
                     e.Graphics.DrawLine(new Pen(ForeColor), new PointF(0, compTop + sizef.Height), new PointF(sizef.Width, compTop + sizef.Height));
                 }
-                #endregion
 
                 //#region L006  removed
                 //e.Graphics.DrawString(composition, this.Font, new Pen(ForeColor).Brush, new PointF(0, compTop));
@@ -369,5 +372,36 @@ namespace WinformsImeControlWithUserControlBasics.L010DrawWithCompositionAttr {
             #endregion
         }
 
+        /// <summary>
+        /// for Fix Problem when hide composition but display default candidate.
+        /// </summary>
+        protected virtual void SetCandidateWindowPos() {
+            #region L008
+            SetCandidateWindowPos(Left, 0);
+            #endregion
+        }
+
+        protected virtual void SetCandidateWindowPos(int x, int y) {
+            #region L008
+            var hIMC = Native.ImmGetContext(Handle);
+            try {
+
+                var cf = new Native.CANDIDATEFORM();
+                cf.ptCurrentPos.x = x;
+                cf.ptCurrentPos.y = y;
+                cf.dwStyle = Native.CFS_CANDIDATEPOS;
+
+                if (hIMC != IntPtr.Zero) {
+                    Native.ImmSetCandidateWindow(hIMC, ref cf);
+                }
+                Native.ImmReleaseContext(Handle, hIMC);
+            }
+            finally {
+                if (hIMC != IntPtr.Zero) {
+                    Native.ImmReleaseContext(Handle, hIMC);
+                }
+            }
+            #endregion
+        }
     }
 }

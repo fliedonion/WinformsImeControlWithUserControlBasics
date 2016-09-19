@@ -15,6 +15,15 @@ namespace WinformsImeControlWithUserControlBasics.L008DisplayYourOwnCandidateWin
             public RECT rcArea;
         }
 
+        // L008 note this structure will be used for IME CandidateWindow
+        [StructLayout(LayoutKind.Sequential)]
+        public struct CANDIDATEFORM {
+            public int dwIndex;
+            public int dwStyle;
+            public POINT ptCurrentPos;
+            public RECT rcArea;
+        }
+
         [StructLayout(LayoutKind.Sequential)]
         public struct RECT {
             public int _Left;

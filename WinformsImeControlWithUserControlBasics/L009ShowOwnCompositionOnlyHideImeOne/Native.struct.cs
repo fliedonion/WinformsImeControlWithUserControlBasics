@@ -16,6 +16,14 @@ namespace WinformsImeControlWithUserControlBasics.L009ShowOwnCompositionOnlyHide
         }
 
         [StructLayout(LayoutKind.Sequential)]
+        public struct CANDIDATEFORM {
+            public int dwIndex;
+            public int dwStyle;
+            public POINT ptCurrentPos;
+            public RECT rcArea;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
         public struct RECT {
             public int _Left;
             public int _Top;

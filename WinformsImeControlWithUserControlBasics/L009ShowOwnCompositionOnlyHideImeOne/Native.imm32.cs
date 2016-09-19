@@ -24,6 +24,9 @@ namespace WinformsImeControlWithUserControlBasics.L009ShowOwnCompositionOnlyHide
         [DllImport("imm32.dll", CharSet = CharSet.Unicode)]
         public static extern int ImmGetCandidateList(IntPtr hIMC, int dwIndex, byte[] lpCandidateList, int dwBufLen);
 
+        [DllImport("imm32.dll", CharSet = CharSet.Unicode)]
+        public static extern int ImmSetCandidateWindow(IntPtr hIMC, ref CANDIDATEFORM lpCandidateForm);
+
 
         // ImmGetCompostionString index.
         public const int
